@@ -1,0 +1,13 @@
+UPDATE event_form SET
+		gender = '{{update_form.fieldState.gender.isVisible ? update_form.formData.gender : update_form.sourceData.gender}}',
+		age = '{{update_form.fieldState.age.isVisible ? update_form.formData.age : update_form.sourceData.age}}',
+    is_matching = '{{update_form.fieldState.is_matching.isVisible ? update_form.formData.is_matching : update_form.sourceData.is_matching}}',
+		created_at = '{{update_form.fieldState.created_at.isVisible ? update_form.formData.created_at : update_form.sourceData.created_at}}',
+		end_time = '{{update_form.fieldState.end_time.isVisible ? update_form.formData.end_time : update_form.sourceData.end_time}}',
+		event_id = '{{update_form.fieldState.event_id.isVisible ? update_form.formData.event_id : update_form.sourceData.event_id}}',
+		start_time = '{{update_form.fieldState.start_time.isVisible ? update_form.formData.start_time : update_form.sourceData.start_time}}',
+		updated_at = '{{update_form.fieldState.updated_at.isVisible ? update_form.formData.updated_at : update_form.sourceData.updated_at}}',
+		event_type = '{{update_form.fieldState.event_type.isVisible ? update_form.formData.event_type : update_form.sourceData.event_type}}',
+		hope_partner = '{{update_form.fieldState.hope_partner.isVisible ? update_form.formData.hope_partner : update_form.sourceData.hope_partner}}',
+		hope_team = '{{update_form.fieldState.hope_team.isVisible ? update_form.formData.hope_team : update_form.sourceData.hope_team}}'
+  WHERE id = {{data_table.selectedRow.id}};

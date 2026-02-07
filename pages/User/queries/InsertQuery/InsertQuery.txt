@@ -1,0 +1,28 @@
+INSERT INTO user (
+	private_id,
+	detail_record,
+	age,
+	competition_cnt,
+	is_open_number,
+	is_open_sns,
+	training_cnt,
+	created_at,
+	updated_at,
+	gender,
+	name,
+	phone_number
+)
+VALUES (
+	'{{insert_form.formData.private_id}}',
+	'{{insert_form.formData.detail_record}}',
+	'{{insert_form.formData.age}}',
+	'{{insert_form.formData.competition_cnt}}',
+	'{{insert_form.formData.is_open_number}}',
+	'{{insert_form.formData.is_open_sns}}',
+	'{{insert_form.formData.training_cnt}}',
+	'{{insert_form.formData.created_at}}',
+	'{{insert_form.formData.updated_at}}',
+	'{{insert_form.formData.gender}}',
+	'{{insert_form.formData.name}}',
+	'{{insert_form.formData.phone_number}}'
+);
