@@ -61,6 +61,7 @@
     "gender": 84,
     "name": 100,
     "record_degree": 140,
+    "role": 700.5625,
     "type": 104
   },
   "customIsLoading": false,
@@ -175,6 +176,9 @@
     },
     {
       "key": "primaryColumns.type.textColor"
+    },
+    {
+      "key": "onRowSelected"
     }
   ],
   "dynamicTriggerPathList": [
@@ -189,6 +193,9 @@
     },
     {
       "key": "onAddNewRowSave"
+    },
+    {
+      "key": "onRowSelected"
     }
   ],
   "enableClientSideSearch": false,
@@ -214,6 +221,7 @@
   "needsErrorInfo": false,
   "onAddNewRowSave": "{{Insert_user1.run(() => {\n            showAlert(\"Successfully created!\");\n            Select_user1.run()\n          }, () => {\n            showAlert(\"Unable to create!\");\n          })}}",
   "onPageChange": "{{\n            Select_user1.run();\n            Total_record_user1.run()\n          }}",
+  "onRowSelected": "{{showModal(Modal1.name);}}",
   "onSearchTextChanged": "{{\n            Select_user1.run();\n            Total_record_user1.run()\n          }}",
   "onSort": "{{\n            Select_user1.run();\n            Total_record_user1.run()\n          }}",
   "parentColumnSpace": 14.1875,
