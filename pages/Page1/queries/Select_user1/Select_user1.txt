@@ -6,11 +6,18 @@ SELECT
   g.guiding_pace,
   g.vi_count,
   g.vi_name,
-  g.vi_record
+  g.vi_record,
+	a.portrait_rights,
+	a.privacy,
+	a.hope_prefs,
+	a.how_to_know,
+	a.motive,
+	a.running_place
 FROM
   user u
 LEFT JOIN vi v ON u.private_id = v.private_id AND u.type = 'VI'
 LEFT JOIN guide g ON u.private_id = g.private_id AND u.type = 'GUIDE'
+LEFT JOIN archive_data a ON a.private_id = u.private_id
 WHERE
   u.name LIKE '%{{user_tabel.searchText}}%'
 ORDER BY

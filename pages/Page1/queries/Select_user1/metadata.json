@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n  u.*,\n  v.is_running_exp,\n  v.guide_name,\n  g.is_guide_exp,\n  g.guiding_pace,\n  g.vi_count,\n  g.vi_name,\n  g.vi_record\nFROM\n  user u\nLEFT JOIN vi v ON u.private_id = v.private_id AND u.type = 'VI'\nLEFT JOIN guide g ON u.private_id = g.private_id AND u.type = 'GUIDE'\nWHERE\n  u.name LIKE '%{{user_tabel.searchText}}%'\nORDER BY\n  u.{{ user_tabel.sortOrder.column || 'created_at' }}\n  {{\nuser_tabel.sortOrder.column\n? (user_tabel.sortOrder.order === \"desc\" ? \"DESC\" : \"ASC\")\n: \"DESC\"\n}}\nLIMIT\n  {{user_tabel.pageSize}}\nOFFSET\n  {{user_tabel.pageOffset}}",
+      "body": "SELECT\n  u.*,\n  v.is_running_exp,\n  v.guide_name,\n  g.is_guide_exp,\n  g.guiding_pace,\n  g.vi_count,\n  g.vi_name,\n  g.vi_record,\n\ta.portrait_rights,\n\ta.privacy,\n\ta.hope_prefs,\n\ta.how_to_know,\n\ta.motive,\n\ta.running_place\nFROM\n  user u\nLEFT JOIN vi v ON u.private_id = v.private_id AND u.type = 'VI'\nLEFT JOIN guide g ON u.private_id = g.private_id AND u.type = 'GUIDE'\nLEFT JOIN archive_data a ON a.private_id = u.private_id\nWHERE\n  u.name LIKE '%{{user_tabel.searchText}}%'\nORDER BY\n  u.{{ user_tabel.sortOrder.column || 'created_at' }}\n  {{\nuser_tabel.sortOrder.column\n? (user_tabel.sortOrder.order === \"desc\" ? \"DESC\" : \"ASC\")\n: \"DESC\"\n}}\nLIMIT\n  {{user_tabel.pageSize}}\nOFFSET\n  {{user_tabel.pageOffset}}",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
