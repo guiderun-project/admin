@@ -24,11 +24,7 @@
   "icon": "globe",
   "pages": [
     {
-      "id": "User",
-      "isDefault": false
-    },
-    {
-      "id": "Page1",
+      "id": "참가자 관리",
       "isDefault": true
     }
   ],

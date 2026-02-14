@@ -1,6 +1,6 @@
 {
   "gitSyncId": "6985dc11db060c5b7624a555_b1ba4ddd-3b0a-4f82-b2f5-9437385b7e42",
-  "id": "Page1_Insert_user1",
+  "id": "참가자 관리_Insert_user1",
   "pluginId": "mysql-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
@@ -28,7 +28,7 @@
       }
     ],
     "name": "Insert_user1",
-    "pageId": "Page1",
+    "pageId": "참가자 관리",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }

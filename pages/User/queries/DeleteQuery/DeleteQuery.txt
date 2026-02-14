@@ -1,2 +1,0 @@
-DELETE FROM user
-  WHERE private_id = {{data_table.triggeredRow.private_id}};

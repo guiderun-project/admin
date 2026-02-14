@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6985dc11db060c5b7624a555_87bfac8d-e16a-4bf1-a925-fe8cb50270de",
-  "id": "User_SelectQuery",
+  "gitSyncId": "6985dc11db060c5b7624a555_800eba46-7595-4c32-aeb3-898f26c4edc5",
+  "id": "참가자 관리_Total_record_user1",
   "pluginId": "mysql-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM user\nWHERE detail_record like '%{{data_table.searchText || \"\"}}%'\nORDER BY {{data_table.sortOrder.column || 'private_id'}} {{data_table.sortOrder.order || \"ASC\"}}\nLIMIT {{data_table.pageSize}}\nOFFSET {{(data_table.pageNo - 1) * data_table.pageSize}};",
+      "body": "SELECT COUNT(*) from user WHERE name LIKE '%{{user_tabel.searchText}}%';",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,10 +22,14 @@
       "name": "Guiderun",
       "pluginId": "mysql-plugin"
     },
-    "dynamicBindingPathList": [],
-    "name": "SelectQuery",
-    "pageId": "User",
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
+    "name": "Total_record_user1",
+    "pageId": "참가자 관리",
     "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": true
+    "userSetOnLoad": false
   }
 }

@@ -2,6 +2,7 @@
   "gitSyncId": "6985dc11db060c5b7624a555_f7c6eee0-b6ed-4760-9408-d09e0c1bc7a7",
   "unpublishedPage": {
     "customSlug": "",
+    "isHidden": false,
     "layouts": [
       {
         "dsl": {
@@ -27,7 +28,7 @@
         }
       }
     ],
-    "name": "Page1",
-    "slug": "page1"
+    "name": "참가자 관리",
+    "slug": ""
   }
 }
