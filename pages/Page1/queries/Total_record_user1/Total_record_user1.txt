@@ -1,1 +1,1 @@
-SELECT COUNT(*) from user WHERE name LIKE '%{{Table1.searchText}}%';
+SELECT COUNT(*) from user WHERE name LIKE '%{{user_tabel.searchText}}%';

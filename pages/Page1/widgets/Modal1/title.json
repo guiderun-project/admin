@@ -41,7 +41,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 41,
   "shouldTruncate": false,
-  "text": "{{Table1.selectedRow.name}} 상세정보",
+  "text": "{{user_tabel.selectedRow.name}} 상세정보",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 1,
@@ -49,5 +49,5 @@
   "type": "TEXT_WIDGET",
   "version": 1,
   "widgetId": "il3t9rijn0",
-  "widgetName": "Text1"
+  "widgetName": "title"
 }

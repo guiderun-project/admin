@@ -1,12 +1,26 @@
 SELECT
-  *
+  u.*,
+  v.is_running_exp,
+  v.guide_name,
+  g.is_guide_exp,
+  g.guiding_pace,
+  g.vi_count,
+  g.vi_name,
+  g.vi_record
 FROM
-  user
+  user u
+LEFT JOIN vi v ON u.private_id = v.private_id AND u.type = 'VI'
+LEFT JOIN guide g ON u.private_id = g.private_id AND u.type = 'GUIDE'
 WHERE
-  name LIKE '%{{Table1.searchText}}%'
+  u.name LIKE '%{{user_tabel.searchText}}%'
 ORDER BY
-  {{Table1.sortOrder.column || 'private_id'}} {{Table1.sortOrder.order !== "desc" ? "" : "DESC"}}
+  u.{{ user_tabel.sortOrder.column || 'created_at' }}
+  {{
+user_tabel.sortOrder.column
+? (user_tabel.sortOrder.order === "desc" ? "DESC" : "ASC")
+: "DESC"
+}}
 LIMIT
-  {{Table1.pageSize}}
+  {{user_tabel.pageSize}}
 OFFSET
-  {{Table1.pageOffset}}
+  {{user_tabel.pageOffset}}

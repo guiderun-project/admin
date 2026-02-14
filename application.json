@@ -24,12 +24,12 @@
   "icon": "globe",
   "pages": [
     {
-      "id": "Page1",
-      "isDefault": true
-    },
-    {
       "id": "User",
       "isDefault": false
+    },
+    {
+      "id": "Page1",
+      "isDefault": true
     }
   ],
   "unpublishedApplicationDetail": {
