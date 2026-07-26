@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 8,
+  "bottomRow": 9,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -33,8 +33,8 @@
   "mobileRightColumn": 55,
   "mobileTopRow": 5,
   "needsErrorInfo": false,
-  "originalBottomRow": 19,
-  "originalTopRow": 15,
+  "originalBottomRow": 8,
+  "originalTopRow": 4,
   "overflow": "NONE",
   "parentColumnSpace": 4.359375,
   "parentId": "502ji1waoz",
@@ -46,7 +46,7 @@
   "text": "{{user_tabel.selectedRow.portrait_rights ? \"동의\" : \"거부\"}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 4,
+  "topRow": 5,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

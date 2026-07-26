@@ -1,14 +1,13 @@
 export default {
-	async confirm_buttonCopyonClick () {
-		const API_BASE_URL = "https://www.guiderun.org";
+	async confirm_buttonCopyonClick (targetUser, role, group) {
+		const API_BASE_URL = "https://api.guiderun.org";
 		const APPSMITH_WEBHOOK_SECRET = "Y64bGKRpjOqD0UN2/MXFhxYvZkt6mh0M2bQgu7Vy+CU=";
 
-		const targetUser = user_tabel.selectedRow;
-		const recordDegree = targetUser?.recordDegree;
 
-		const role = targetUser?.role;
+		const recordDegree = group;
+		const userId = targetUser?.user_id
 
-		if (!targetUser?.userId) {
+		if (!userId) {
 			showAlert("처리할 회원을 선택해주세요.", "warning");
 			return;
 		}
@@ -31,7 +30,7 @@ export default {
 					"X-Appsmith-Webhook-Secret": APPSMITH_WEBHOOK_SECRET
 				},
 				body: JSON.stringify({
-					userId: targetUser.userId,
+					userId,
 					role,
 					recordDegree,
 					requestedBy: appsmith.user.email || "appsmith"

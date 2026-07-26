@@ -32,7 +32,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{confirm_user.confirm_buttonCopyonClick();}}",
+  "onClick": "{{confirm_user.confirm_buttonCopyonClick(user_tabel.selectedRow, RoleSelect.selectedOptionValue, GroupSelect.selectedOptionValue);}}",
   "originalBottomRow": 272,
   "originalTopRow": 268,
   "parentId": "rtbozmagyo",

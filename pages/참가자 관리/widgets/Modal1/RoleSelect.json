@@ -2,9 +2,9 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 13,
+  "bottomRow": 15,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( user_tabel.selectedRow.role))(Select2.options, Select2.serverSideFiltering) }}",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( user_tabel.selectedRow.role))(RoleSelect.options, RoleSelect.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -22,7 +22,11 @@
       "key": "sourceData"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
   "isDisabled": false,
   "isFilterable": true,
   "isLoading": false,
@@ -43,8 +47,11 @@
   "mobileRightColumn": 21,
   "mobileTopRow": 12,
   "needsErrorInfo": false,
+  "onOptionChange": "",
   "optionLabel": "name",
   "optionValue": "value",
+  "originalBottomRow": 13,
+  "originalTopRow": 9,
   "parentColumnSpace": 6.9375,
   "parentId": "rtbozmagyo",
   "parentRowSpace": 10,
@@ -54,9 +61,9 @@
   "rightColumn": 38,
   "serverSideFiltering": false,
   "sourceData": "[\n  {\n    \"name\": \"관리자\",\n    \"value\": \"ROLE_ADMIN\"\n  },\n  {\n    \"name\": \"코치/매니저\",\n    \"value\": \"ROLE_COACH\"\n  },\n  {\n    \"name\": \"참가자\",\n    \"value\": \"ROLE_USER\"\n  },{\n\t \"name\": \"대기중\",\n    \"value\": \"ROLE_WAIT\"\n\t}\n]",
-  "topRow": 9,
+  "topRow": 11,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "gewrcmi3zo",
-  "widgetName": "Select2"
+  "widgetName": "RoleSelect"
 }
