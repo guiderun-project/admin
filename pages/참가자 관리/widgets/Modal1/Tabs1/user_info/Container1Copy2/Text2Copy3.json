@@ -40,7 +40,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 33,
   "shouldTruncate": false,
-  "text": "연령대",
+  "text": "생년월일",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 0,

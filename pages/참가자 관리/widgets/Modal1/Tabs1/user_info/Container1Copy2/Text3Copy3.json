@@ -43,7 +43,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 16,
   "shouldTruncate": false,
-  "text": "{{user_tabel.selectedRow.age}}",
+  "text": "{{user_tabel.selectedRow.birth}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 4,
